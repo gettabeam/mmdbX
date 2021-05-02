@@ -1,0 +1,44 @@
+Follow setps below to add outdated oracle jdbc driver to the project
+
+Add the following entries to pom.xml
+
+<dependency>
+    <groupId>com.oracle</groupId>
+    <artifactId>ojdbc</artifactId>
+    <version>1.0</version>
+</dependency>
+<dependency>
+	<groupId>mysql</groupId>
+	<artifactId>mysql-connector-java</artifactId>
+	<version>8.0.7-dmr</version>
+</dependency>
+
+Get the two Jars ready and run the following Maven commands to add the two libaries to local repository 
+
+>mvn install:install-file -Dfile=ora_classes12.jar -DgroupId=com.oracle -DartifactId=ojdbc -Dversion=1.0 -Dpackaging=jar
+>mvn install:install-file -Dfile=mysql-3.0.14.jar -DgroupId=com.oracle -DartifactId=mysqljdbc -Dversion=1.0 -Dpackaging=jar
+
+mvn install:install-file -Dfile=mmdbx-1.0-SNAPSHOT.jar -DgroupId=com.solar.mmdb -DartifactId=mmdbx -Dversion=1.0 -Dpackaging=jar
+
+Run java
+For somereason the directive to add main class attribute in pom.xml doesn't work. Cannot use "java -jar " option which always result in mainclass not defined error.
+>java -cp mmdbx-1.0-SNAPSHOT-jar-with-dependencies.jar com.solar.mmdb.mmapp
+
+//edit by blackgate
+
+Scaffolding for mmdbweb
+    mvn archetype:generate -DgroupId=com.solar.mmdbweb -DartifactId=mmdbweb -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+Generic Java project
+    mvn archetype:generate -DgroupId=com.solar.opencv -DartifactId=robotfacttrack -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+
+Scaffolding for java stockquote
+    mvn archetype:generate -DgroupId=com.solar.stockquote -DartifactId=stockquote -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+
+gitlab@myux.com
+
+myux.com (127.0.0.1)
+access gitlab : http://myux.com
+currently cloned project : mmdbx
+

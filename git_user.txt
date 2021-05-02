@@ -1,0 +1,57 @@
+MAC (osxsolar 6T)
+    username: axe@osxsolar
+    email: axe@osxsolar
+    user:axe
+
+Ubuntu
+    username:wyeric.2000@gmail.com (outdated)
+    username:alphawolf
+    user:alphawolf
+
+Blackgate
+    username:Blackgate
+    email: dev@Blackgate
+
+Git Repository (mmdb)
+
+    git config --global user.name "axe"
+    git config --global user.email "axe@osxsolar"
+    git clone http://ds5:30000/mmdbx/mmdbX.git
+    git pull
+
+
+Protected Branch
+
+    To allow developers to push to master branch, the owner must set it as unprotected
+    Project->settings->Repisotry->Protected
+
+   git config --global user.name "axe"
+    git config --global user.email "axe@osxsolar"
+    git clone http://ds5:30000/sq/nodejs-stockquote.git
+    git pull
+
+Git Init from source directory
+    cd existing_folder
+    git init
+    git remote add origin http://voyager:30000/solar/opencv.git
+    git add .
+    git commit -m "Initial commit"
+    git push -u origin master   
+
+
+git clone http://voyager:30000/solar/opencv.git
+    git config --global user.name "blackgate"
+    git config --global user.email "dev@blackgate"
+    cd opencv
+    touch README.md
+    git add README.md
+    git commit -m "add README"
+    git push -u origin master
+
+
+gitlab@myux.com  (backup of ds5:30000)
+
+myux.com (127.0.0.1)
+access gitlab : http://myux.com
+currently cloned project : mmdbx
+
